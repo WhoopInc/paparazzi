@@ -240,7 +240,7 @@ class PaparazziPluginTest {
       .withArguments("testDebug", "--stacktrace")
       .runFixture(fixtureRoot) { build() }
 
-    val snapshotsDir = File(fixtureRoot, "custom/reports/paparazzi/images")
+    val snapshotsDir = File(fixtureRoot, "custom/reports/paparazzi/debug/images")
     assertThat(snapshotsDir.exists()).isFalse()
   }
 
