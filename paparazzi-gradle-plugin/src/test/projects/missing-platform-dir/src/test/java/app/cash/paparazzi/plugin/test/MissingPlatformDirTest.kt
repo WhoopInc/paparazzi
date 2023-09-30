@@ -15,12 +15,6 @@
  */
 package app.cash.paparazzi.plugin.test
 
-import app.cash.paparazzi.Paparazzi
-import app.cash.paparazzi.androidHome
-import app.cash.paparazzi.detectEnvironment
-import org.junit.Rule
-import org.junit.Test
-
 class MissingPlatformDirTest {
 
 //  @get:Rule
