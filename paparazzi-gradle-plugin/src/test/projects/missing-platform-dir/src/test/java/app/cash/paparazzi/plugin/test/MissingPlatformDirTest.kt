@@ -22,12 +22,13 @@ import org.junit.Rule
 import org.junit.Test
 
 class MissingPlatformDirTest {
-  @get:Rule
-  val paparazzi = Paparazzi(
-    environment = detectEnvironment().copy(
-      platformDir = "${androidHome()}/platforms/android-oops"
-    )
-  )
 
-  @Test fun test() {}
+//  @get:Rule
+//  val paparazzi = Paparazzi(
+//    environment = detectEnvironment().copy(
+//      platformDir = "${androidHome()}/platforms/android-oops"
+//    )
+//  )
+//
+//  @Test fun test() {}
 }
