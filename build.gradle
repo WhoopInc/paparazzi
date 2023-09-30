@@ -19,7 +19,11 @@ buildscript {
     classpath libs.plugin.ksp
     classpath libs.grgit
 
-    classpath libs.paparazzi.gradle.plugin
+    // Normally you would declare a version here, but we use dependency substitution in
+    // settings.gradle to use the version built from inside the repo.
+    classpath 'app.cash.paparazzi:paparazzi-gradle-plugin'
+
+//    classpath libs.paparazzi.gradle.plugin
   }
 }
 
