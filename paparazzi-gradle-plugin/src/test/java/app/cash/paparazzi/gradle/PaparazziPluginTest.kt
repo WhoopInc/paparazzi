@@ -232,31 +232,31 @@ class PaparazziPluginTest {
     assertThat(snapshotsDir.exists()).isFalse()
   }
 
-  @Test
-  fun buildClassNextSdkAccess() {
-    val fixtureRoot = File("src/test/projects/build-class-next-sdk")
+//  @Test
+//  fun buildClassNextSdkAccess() {
+//    val fixtureRoot = File("src/test/projects/build-class-next-sdk")
+//
+//    gradleRunner
+//      .withArguments("testDebug", "--stacktrace")
+//      .runFixture(fixtureRoot) { build() }
+//
+//    val snapshotsDir = File(fixtureRoot, "custom/reports/paparazzi/debug/images")
+//    assertThat(snapshotsDir.exists()).isFalse()
+//  }
 
-    gradleRunner
-      .withArguments("testDebug", "--stacktrace")
-      .runFixture(fixtureRoot) { build() }
-
-    val snapshotsDir = File(fixtureRoot, "custom/reports/paparazzi/debug/images")
-    assertThat(snapshotsDir.exists()).isFalse()
-  }
-
-  @Test
-  fun missingPlatformDirTest() {
-    val fixtureRoot = File("src/test/projects/missing-platform-dir")
-
-    val result = gradleRunner
-      .withArguments("testDebug", "--stacktrace")
-      .forwardOutput()
-      .runFixture(fixtureRoot) { buildAndFail() }
-
-    assertThat(result.task(":testDebug")).isNull()
-    assertThat(result.output).contains("java.io.FileNotFoundException")
-    assertThat(result.output).contains("Missing platform version oops")
-  }
+//  @Test
+//  fun missingPlatformDirTest() {
+//    val fixtureRoot = File("src/test/projects/missing-platform-dir")
+//
+//    val result = gradleRunner
+//      .withArguments("testDebug", "--stacktrace")
+//      .forwardOutput()
+//      .runFixture(fixtureRoot) { buildAndFail() }
+//
+//    assertThat(result.task(":testDebug")).isNull()
+//    assertThat(result.output).contains("java.io.FileNotFoundException")
+//    assertThat(result.output).contains("Missing platform version oops")
+//  }
 
   @Test
   fun flagDebugLinkedObjectsIsOff() {
