@@ -41,7 +41,7 @@ class GifSnapshotHandler @JvmOverloads constructor(
     return object : FrameHandler {
       override fun handle(
         image: BufferedImage,
-        frameIndex: Int?,
+        frameIndex: Int?
       ) {
         // handle() gets called with each image when gif() is used
         val expected = File(

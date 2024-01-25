@@ -31,7 +31,7 @@ data class Snapshot(
 internal fun Snapshot.toFileName(
   delimiter: String = "_",
   extension: String,
-  frameIndex: Int? = null,
+  frameIndex: Int? = null
 ): String {
   val formattedLabel = if (name != null) {
     "$delimiter${name.toLowerCase(Locale.US).replace("\\s".toRegex(), delimiter)}"
@@ -43,5 +43,4 @@ internal fun Snapshot.toFileName(
   } else {
     "${testName.packageName}${delimiter}${testName.className}${delimiter}${testName.methodName}$formattedLabel.$extension"
   }
-
 }
