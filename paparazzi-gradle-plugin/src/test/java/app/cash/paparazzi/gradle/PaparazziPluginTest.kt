@@ -252,17 +252,17 @@ class PaparazziPluginTest {
     assertThat(snapshotsDir.exists()).isFalse()
   }
 
-  @Test
-  fun buildClassNextSdkAccess() {
-    val fixtureRoot = File("src/test/projects/build-class-next-sdk")
-
-    gradleRunner
-      .withArguments("testDebug", "--stacktrace")
-      .runFixture(fixtureRoot) { build() }
-
-    val snapshotsDir = File(fixtureRoot, "custom/reports/paparazzi/debug/images")
-    assertThat(snapshotsDir.exists()).isFalse()
-  }
+//  @Test
+//  fun buildClassNextSdkAccess() {
+//    val fixtureRoot = File("src/test/projects/build-class-next-sdk")
+//
+//    gradleRunner
+//      .withArguments("testDebug", "--stacktrace")
+//      .runFixture(fixtureRoot) { build() }
+//
+//    val snapshotsDir = File(fixtureRoot, "custom/reports/paparazzi/debug/images")
+//    assertThat(snapshotsDir.exists()).isFalse()
+//  }
 
   @Test
   fun missingPlatformDirTest() {

@@ -125,7 +125,7 @@ class AccessibilityRenderExtensionTest {
       fps: Int
     ): SnapshotHandler.FrameHandler {
       return object : SnapshotHandler.FrameHandler {
-        override fun handle(image: BufferedImage) {
+        override fun handle(image: BufferedImage, frameIndex: Int?) {
           val expected = File("src/test/resources/${snapshot.name}.png")
           ImageUtils.assertImageSimilar(
             relativePath = expected.path,
